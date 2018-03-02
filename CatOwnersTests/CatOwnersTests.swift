@@ -33,9 +33,9 @@ class CatOwnersTests: XCTestCase {
     
     func testFilterByGender_given_OwnerListMixed_return_petCatsOfMale() {
         //Test Owner data
-        let bob = Owner(json: ["name": "Bob", "gender": "Male", "age": 40, "pets": [garf!, rover!]])
-        let alice = Owner(json: ["name": "Alice", "gender": "Female", "age": 40, "pets": [heath!, alf!]])
-        let jean = Owner(json: ["name": "Jean", "gender": "Male", "age": 40, "pets": [dom!]])
+        let bob = Owner(json: ["name": "Bob", "gender": "Male", "age": 40, "pets": [["name": "Garfield", "type": "cat"], ["name": "Rover", "type": "dog"]]])
+        let alice = Owner(json: ["name": "Alice", "gender": "Female", "age": 40, "pets": [["name": "Heathcliff", "type": "cat"], ["name": "Alf", "type": "cat"]]])
+        let jean = Owner(json: ["name": "Jean", "gender": "Male", "age": 40, "pets": [["name": "Dom", "type": "cat"]]])
 
         let result = petSortHelper.filterByGenderAndType(gender: "Male", kind: "cat", data: [bob!, alice!, jean!])
             XCTAssertTrue(
