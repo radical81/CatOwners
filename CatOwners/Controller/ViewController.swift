@@ -25,7 +25,9 @@ class ViewController: UIViewController {
             print("name = \(item.name!)")
             print("gender = \(item.gender!)")
             print("age = \(item.age!)")
-            print("pets = \(item.pets!)")
+            for p in item.pets! {
+                print("pet = \(p.name!) the \(p.kind!)")
+            }
         }
     }
     override func didReceiveMemoryWarning() {
