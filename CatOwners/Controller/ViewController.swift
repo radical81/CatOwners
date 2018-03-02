@@ -12,9 +12,22 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//             testRunData() // For debugging URL call
     }
 
+    func testRunData() {
+        let api = APIManager()
+        api.loadData(PET_SOURCE, completion: didLoadData)
+    }
+    
+    func didLoadData(_ items: [Owner]) {
+        for item in items {
+            print("name = \(item.name!)")
+            print("gender = \(item.gender!)")
+            print("age = \(item.age!)")
+            print("pets = \(item.pets!)")
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
