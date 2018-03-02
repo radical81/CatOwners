@@ -14,7 +14,7 @@ class PetSortHelper {
     func filterByGenderAndType(gender: String, kind: String, data: [Owner])->[Pet] {
         var malePets : [Pet] = []
         
-        let maleOwners = data.filter{$0.gender == "Male"}
+        let maleOwners = data.filter{$0.gender == gender}
         for m in maleOwners {
             if let mPets : [Pet] = m.pets {
                 for pet in mPets {

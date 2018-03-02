@@ -13,6 +13,11 @@ class CatOwnersTests: XCTestCase {
     
     let petSortHelper = PetSortHelper()
     
+    
+    //Test Owner data
+    let bob = Owner(json: ["name": "Bob", "gender": "Male", "age": 40, "pets": [["name": "Garfield", "type": "cat"], ["name": "Rover", "type": "dog"]]])
+    let alice = Owner(json: ["name": "Alice", "gender": "Female", "age": 40, "pets": [["name": "Heathcliff", "type": "cat"], ["name": "Alf", "type": "cat"]]])
+    let jean = Owner(json: ["name": "Jean", "gender": "Male", "age": 40, "pets": [["name": "Dom", "type": "cat"]]])
     //Test Pet data
     let garf = Pet(json:["name": "Garfield", "type": "cat"])
     let rover = Pet(json: ["name": "Rover", "type": "dog"])
@@ -32,10 +37,6 @@ class CatOwnersTests: XCTestCase {
     }
     
     func testFilterByGender_given_OwnerListMixed_return_petCatsOfMale() {
-        //Test Owner data
-        let bob = Owner(json: ["name": "Bob", "gender": "Male", "age": 40, "pets": [["name": "Garfield", "type": "cat"], ["name": "Rover", "type": "dog"]]])
-        let alice = Owner(json: ["name": "Alice", "gender": "Female", "age": 40, "pets": [["name": "Heathcliff", "type": "cat"], ["name": "Alf", "type": "cat"]]])
-        let jean = Owner(json: ["name": "Jean", "gender": "Male", "age": 40, "pets": [["name": "Dom", "type": "cat"]]])
 
         let result = petSortHelper.filterByGenderAndType(gender: "Male", kind: "cat", data: [bob!, alice!, jean!])
             XCTAssertTrue(
@@ -45,6 +46,18 @@ class CatOwnersTests: XCTestCase {
                 result[1].name == "Dom" &&
                 result.count == 2
             )
+    }
+    
+    func testFilterByGender_given_OwnerListMixed_return_petCatsOfFemale() {
+        
+        let result = petSortHelper.filterByGenderAndType(gender: "Female", kind: "cat", data: [bob!, alice!, jean!])
+        XCTAssertTrue(
+            result[0].kind == "cat" &&
+                result[0].name == "Heathcliff" &&
+                result[1].kind == "cat" &&
+                result[1].name == "Alf" &&
+                result.count == 2
+        )
     }
     
     func testSortPetsByName_given_PetSet_returnSortedAscending() {

@@ -33,13 +33,13 @@ class Owner: Codable {
         guard let age = json["age"] as? Int else {
             return nil
         }
-        if json["pets"] != nil {
-            if let pets = generatePets(data: json["pets"]  as! [[String: String]]) {
+        if let jsonPets = json["pets"] as? [[String: String]] {
+            if let pets = generatePets(data: jsonPets) {
                 self.pets = pets
             }
-            else {
-                return nil
-            }
+        }
+        else {
+            return nil
         }
         self.name = name
         self.gender = gender
