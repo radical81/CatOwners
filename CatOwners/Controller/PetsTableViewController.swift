@@ -34,8 +34,8 @@ class PetsTableViewController: UITableViewController {
     }
     
     func didLoadData(_ items: [Owner]) {
-        self.petListMale = petHelper.filterByGenderAndType(gender: "Male", kind: "Cat", data: items)
-        self.petListFemale = petHelper.filterByGenderAndType(gender: "Female", kind: "Cat", data: items)
+        self.petListMale = petHelper.sortPetsByName(ascending: true, data: petHelper.filterByGenderAndType(gender: "Male", kind: "Cat", data: items))
+        self.petListFemale = petHelper.sortPetsByName(ascending: true, data: petHelper.filterByGenderAndType(gender: "Female", kind: "Cat", data: items))
         tableView.reloadData()
     }
 
