@@ -18,6 +18,7 @@
 		864DF6882049703E009BDDC0 /* PetSortHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864DF6872049703E009BDDC0 /* PetSortHelper.swift */; };
 		864DF68B20499875009BDDC0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864DF68A20499875009BDDC0 /* Config.swift */; };
 		864DF68D204998BC009BDDC0 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864DF68C204998BC009BDDC0 /* APIManager.swift */; };
+		864DF68F2049A554009BDDC0 /* PetsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864DF68E2049A554009BDDC0 /* PetsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		864DF6872049703E009BDDC0 /* PetSortHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSortHelper.swift; sourceTree = "<group>"; };
 		864DF68A20499875009BDDC0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		864DF68C204998BC009BDDC0 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		864DF68E2049A554009BDDC0 /* PetsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				864DF66120496E6B009BDDC0 /* ViewController.swift */,
+				864DF68E2049A554009BDDC0 /* PetsTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				864DF66220496E6B009BDDC0 /* ViewController.swift in Sources */,
 				864DF68520496F28009BDDC0 /* Pet.swift in Sources */,
 				864DF6882049703E009BDDC0 /* PetSortHelper.swift in Sources */,
+				864DF68F2049A554009BDDC0 /* PetsTableViewController.swift in Sources */,
 				864DF68320496F1C009BDDC0 /* Owner.swift in Sources */,
 				864DF66020496E6B009BDDC0 /* AppDelegate.swift in Sources */,
 				864DF68B20499875009BDDC0 /* Config.swift in Sources */,
