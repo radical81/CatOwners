@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Owner {
+class Owner: Codable {
     var name : String?
     var gender: String?
     var age: Int?

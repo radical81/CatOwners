@@ -15,6 +15,7 @@
 		864DF67520496E6B009BDDC0 /* CatOwnersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864DF67420496E6B009BDDC0 /* CatOwnersTests.swift */; };
 		864DF68320496F1C009BDDC0 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864DF68220496F1C009BDDC0 /* Owner.swift */; };
 		864DF68520496F28009BDDC0 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864DF68420496F28009BDDC0 /* Pet.swift */; };
+		864DF6882049703E009BDDC0 /* PetSortHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864DF6872049703E009BDDC0 /* PetSortHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		864DF67620496E6B009BDDC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		864DF68220496F1C009BDDC0 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		864DF68420496F28009BDDC0 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
+		864DF6872049703E009BDDC0 /* PetSortHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetSortHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		864DF65E20496E6B009BDDC0 /* CatOwners */ = {
 			isa = PBXGroup;
 			children = (
+				864DF68620497022009BDDC0 /* Helper */,
 				864DF68120496EF0009BDDC0 /* Service */,
 				864DF68020496ED7009BDDC0 /* Controller */,
 				864DF67F20496EC3009BDDC0 /* Model */,
@@ -124,6 +127,14 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		864DF68620497022009BDDC0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				864DF6872049703E009BDDC0 /* PetSortHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +242,7 @@
 			files = (
 				864DF66220496E6B009BDDC0 /* ViewController.swift in Sources */,
 				864DF68520496F28009BDDC0 /* Pet.swift in Sources */,
+				864DF6882049703E009BDDC0 /* PetSortHelper.swift in Sources */,
 				864DF68320496F1C009BDDC0 /* Owner.swift in Sources */,
 				864DF66020496E6B009BDDC0 /* AppDelegate.swift in Sources */,
 			);
