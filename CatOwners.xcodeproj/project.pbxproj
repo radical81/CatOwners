@@ -13,6 +13,8 @@
 		864DF66720496E6B009BDDC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 864DF66620496E6B009BDDC0 /* Assets.xcassets */; };
 		864DF66A20496E6B009BDDC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 864DF66820496E6B009BDDC0 /* LaunchScreen.storyboard */; };
 		864DF67520496E6B009BDDC0 /* CatOwnersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864DF67420496E6B009BDDC0 /* CatOwnersTests.swift */; };
+		864DF68320496F1C009BDDC0 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864DF68220496F1C009BDDC0 /* Owner.swift */; };
+		864DF68520496F28009BDDC0 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864DF68420496F28009BDDC0 /* Pet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		864DF67020496E6B009BDDC0 /* CatOwnersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatOwnersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		864DF67420496E6B009BDDC0 /* CatOwnersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatOwnersTests.swift; sourceTree = "<group>"; };
 		864DF67620496E6B009BDDC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		864DF68220496F1C009BDDC0 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		864DF68420496F28009BDDC0 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,10 @@
 		864DF65E20496E6B009BDDC0 /* CatOwners */ = {
 			isa = PBXGroup;
 			children = (
+				864DF68120496EF0009BDDC0 /* Service */,
+				864DF68020496ED7009BDDC0 /* Controller */,
+				864DF67F20496EC3009BDDC0 /* Model */,
 				864DF65F20496E6B009BDDC0 /* AppDelegate.swift */,
-				864DF66120496E6B009BDDC0 /* ViewController.swift */,
 				864DF66320496E6B009BDDC0 /* Main.storyboard */,
 				864DF66620496E6B009BDDC0 /* Assets.xcassets */,
 				864DF66820496E6B009BDDC0 /* LaunchScreen.storyboard */,
@@ -94,6 +100,30 @@
 				864DF67620496E6B009BDDC0 /* Info.plist */,
 			);
 			path = CatOwnersTests;
+			sourceTree = "<group>";
+		};
+		864DF67F20496EC3009BDDC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				864DF68220496F1C009BDDC0 /* Owner.swift */,
+				864DF68420496F28009BDDC0 /* Pet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		864DF68020496ED7009BDDC0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				864DF66120496E6B009BDDC0 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		864DF68120496EF0009BDDC0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				864DF66220496E6B009BDDC0 /* ViewController.swift in Sources */,
+				864DF68520496F28009BDDC0 /* Pet.swift in Sources */,
+				864DF68320496F1C009BDDC0 /* Owner.swift in Sources */,
 				864DF66020496E6B009BDDC0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
