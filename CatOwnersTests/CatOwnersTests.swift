@@ -12,7 +12,15 @@ import XCTest
 class CatOwnersTests: XCTestCase {
     
     let petSortHelper = PetSortHelper()
+    
+    //Test Pet data
+    let garf = Pet(json:["name": "Garfield", "type": "cat"])
+    let rover = Pet(json: ["name": "Rover", "type": "dog"])
+    let heath = Pet(json: ["name": "Heathcliff", "type": "cat"])
+    let alf = Pet(json: ["name": "Alf", "type": "cat"])
+    let dom = Pet(json: ["name": "Dom", "type": "cat"])
 
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -24,12 +32,7 @@ class CatOwnersTests: XCTestCase {
     }
     
     func testFilterByGender_given_OwnerListMixed_return_petCatsOfMale() {
-        let garf = Pet(json:["name": "Garfield", "type": "cat"])
-        let rover = Pet(json: ["name": "Rover", "type": "dog"])
-        let heath = Pet(json: ["name": "Heathcliff", "type": "cat"])
-        let alf = Pet(json: ["name": "Alf", "type": "cat"])
-        let dom = Pet(json: ["name": "Dom", "type": "cat"])
-
+        //Test Owner data
         let bob = Owner(json: ["name": "Bob", "gender": "Male", "age": 40, "pets": [garf!, rover!]])
         let alice = Owner(json: ["name": "Alice", "gender": "Female", "age": 40, "pets": [heath!, alf!]])
         let jean = Owner(json: ["name": "Jean", "gender": "Male", "age": 40, "pets": [dom!]])
@@ -42,5 +45,27 @@ class CatOwnersTests: XCTestCase {
                 result[1].name == "Dom" &&
                 result.count == 2
             )
-    }    
+    }
+    
+    func testSortPetsByName_given_PetSet_returnSortedAscending() {
+        let result = petSortHelper.sortPetsByName(ascending: true, data: [garf!, rover!, heath!])
+        let expected = [garf!, heath!, rover!]
+        XCTAssertTrue(
+            result[0].name == expected[0].name &&
+            result[1].name == expected[1].name &&
+            result[2].name == expected[2].name &&
+            result.count == 3
+        )
+    }
+    
+    func testSortPetsByName_given_PetSet_returnSortedDescending() {
+        let result = petSortHelper.sortPetsByName(ascending: false, data: [garf!, rover!, heath!])
+        let expected = [rover!, heath!, garf!]
+        XCTAssertTrue(
+            result[0].name == expected[0].name &&
+                result[1].name == expected[1].name &&
+                result[2].name == expected[2].name &&
+                result.count == 3
+        )
+    }
 }

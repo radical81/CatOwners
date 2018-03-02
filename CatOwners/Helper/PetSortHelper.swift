@@ -28,7 +28,10 @@ class PetSortHelper {
     }
 
     
-//    func sortPetsByName(ascending:Bool, data: [Owner])->[Pet] {
-//
-//    }
+    func sortPetsByName(ascending:Bool, data: [Pet])->[Pet] {
+        if(ascending == true) {
+            return data.sorted(by: {$0.name! < $1.name!})
+        }
+        return data.sorted(by: {$0.name! > $1.name!})
+    }
 }
